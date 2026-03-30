@@ -8,14 +8,6 @@
             <UIcon name="i-heroicons-globe-alt" size="24" />
             <span>CountryListing</span>
           </NuxtLink>
-          <nav>
-            <UButton
-              to="/countries"
-              variant="ghost"
-              label="Pays"
-              icon="i-heroicons-flag"
-            />
-          </nav>
         </div>
         <USeparator />
       </UContainer>
@@ -43,7 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
 }
 
 .app-logo {
@@ -58,7 +50,7 @@
 
 .app-main {
   min-height: calc(100vh - 10rem);
-  padding: 2rem 0;
+  padding: 1rem 4rem;
 }
 
 .app-footer {
