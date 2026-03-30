@@ -13,9 +13,11 @@
     "@artmizu/nuxt-prometheus": "3.0.1",
     "@nuxt/a11y": "1.0.0-alpha.1",
     "@nuxt/eslint": "1.15.2",
-    "@nuxt/ui": "4.6.0",
+    "@nuxt/ui": "3.3.7",
+    "graphql": "^16.13.2",
+    "graphql-request": "^7.4.0",
     "nuxt": "^3.21.2",
     "vue": "^3.5.30",
-    "vue-router": "^5.0.4"
+    "vue-router": "^4.6.4"
   }
 }

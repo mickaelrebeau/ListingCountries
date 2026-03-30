@@ -1,3 +1,5 @@
 <script setup lang="ts">
-navigateTo('/countries')
+definePageMeta({
+  redirect: '/countries',
+})
 </script>
