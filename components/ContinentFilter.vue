@@ -27,6 +27,7 @@ const selected = computed({
       :items="items"
       value-key="value"
       icon="i-heroicons-globe-alt"
+      aria-label="Filtrer par continent"
     >
       <template #item="{ item }">
         <span class="continent-filter__item">
@@ -42,22 +43,11 @@ const selected = computed({
   min-width: 220px;
   padding: 0.625rem 0.875rem;
   font-size: 0.9375rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 0.5rem;
-  background-color: #fff;
-  color: #333;
-}
-
-.continent-filter :deep(span) {
-  margin: 0 0.2rem;
 }
 
 .continent-filter :deep([role="listbox"]) {
   padding: 0.375rem;
   border-radius: 0.625rem;
-  box-shadow:
-    0 4px 24px -4px rgba(0, 0, 0, 0.12),
-    0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .continent-filter :deep([role="option"]) {

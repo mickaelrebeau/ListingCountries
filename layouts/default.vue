@@ -35,7 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem;
+  padding: 1rem 0;
 }
 
 .app-logo {
@@ -50,7 +50,7 @@
 
 .app-main {
   min-height: calc(100vh - 10rem);
-  padding: 1rem 4rem;
+  padding: 2rem 0;
 }
 
 .app-footer {

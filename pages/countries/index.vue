@@ -51,9 +51,9 @@ watch([search, continent], ([q, c]) => {
       </div>
     </div>
 
-    <div v-if="filteredCountries.length || !countriesStatus || countriesStatus === 'success'" class="results-count">
+    <p v-if="countriesStatus === 'success'" class="results-count">
       {{ filteredCountries.length }} pays trouvé{{ filteredCountries.length > 1 ? 's' : '' }}
-    </div>
+    </p>
 
     <LoadingSkeleton v-if="countriesStatus === 'pending'" />
 

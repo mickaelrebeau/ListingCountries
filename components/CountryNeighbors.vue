@@ -9,12 +9,13 @@ const props = defineProps<{
 const neighbors = computed(() =>
   props.countries
     .filter(c => c.code !== props.currentCode)
+    .slice(0, 5),
 )
 </script>
 
 <template>
   <section v-if="neighbors.length" class="neighbors">
-    <h2 class="neighbors__title">Pays du même continent</h2>
+    <h2 class="neighbors__title">5 pays du même continent</h2>
     <div class="neighbors__list">
       <NuxtLink
         v-for="country in neighbors"
@@ -68,11 +69,6 @@ const neighbors = computed(() =>
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 0.5rem;
-  padding: .5rem 1rem;
-  background-color: #fff;
-  color: #333;
 }
 
 .neighbors__emoji {

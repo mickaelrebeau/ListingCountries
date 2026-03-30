@@ -1,13 +1,22 @@
 <script setup lang="ts">
 import type { Country } from '~/types/country'
 
-defineProps<{
+const props = defineProps<{
   country: Pick<Country, 'code' | 'name' | 'emoji' | 'continent'>
 }>()
+
+const route = useRoute()
+
+const detailLink = computed(() => {
+  const query: Record<string, string> = {}
+  if (route.query.q) query.q = route.query.q as string
+  if (route.query.continent) query.continent = route.query.continent as string
+  return { path: `/countries/${props.country.code}`, query }
+})
 </script>
 
 <template>
-  <NuxtLink :to="`/countries/${country.code}`" class="country-card">
+  <NuxtLink :to="detailLink" class="country-card">
     <UCard>
       <div class="country-card__emoji">
         {{ country.emoji }}
@@ -31,15 +40,12 @@ defineProps<{
 
 <style scoped>
 .country-card {
+  display: block;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-  border: 1px solid #e0e0e0;
   border-radius: 0.5rem;
-  padding: .5rem 1rem;
-  background-color: #fff;
-  color: #333;
 }
 
 .country-card:hover {

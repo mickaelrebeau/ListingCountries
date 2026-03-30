@@ -28,6 +28,7 @@ onUnmounted(() => {
     <UInput
       :model-value="internal"
       placeholder="Rechercher un pays…"
+      aria-label="Rechercher un pays"
       icon="i-heroicons-magnifying-glass"
       variant="outline"
       size="lg"
@@ -40,13 +41,5 @@ onUnmounted(() => {
 .search-input :deep(input) {
   padding: 0.625rem 0.875rem;
   font-size: 0.9375rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 0.5rem;
-  background-color: #fff;
-  color: #333;
-}
-
-.search-input :deep(span) {
-  margin-left: 0.2rem;
 }
 </style>
