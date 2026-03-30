@@ -45,7 +45,9 @@ const detailLink = computed(() => {
   cursor: pointer;
   text-decoration: none;
   color: inherit;
+  border: 1px solid #e0e0e0;
   border-radius: 0.5rem;
+  padding: .5rem 1rem;
 }
 
 .country-card:hover {

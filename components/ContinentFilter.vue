@@ -48,6 +48,9 @@ const selected = computed({
 .continent-filter :deep([role="listbox"]) {
   padding: 0.375rem;
   border-radius: 0.625rem;
+  background: var(--ui-bg);
+  border: 1px solid var(--ui-border);
+  box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.12);
 }
 
 .continent-filter :deep([role="option"]) {

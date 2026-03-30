@@ -50,7 +50,7 @@
 
 .app-main {
   min-height: calc(100vh - 10rem);
-  padding: 2rem 0;
+  padding: 2rem 2rem;
 }
 
 .app-footer {

@@ -59,6 +59,11 @@ const neighbors = computed(() =>
   color: inherit;
   cursor: pointer;
   transition: transform 0.15s ease;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  padding: .5rem 1rem;
+  background-color: #fff;
+  color: #333;
 }
 
 .neighbors__card:hover {
