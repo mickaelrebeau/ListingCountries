@@ -7,28 +7,26 @@ defineProps<{
 </script>
 
 <template>
-  <UCard
-    as="NuxtLink"
-    :to="`/countries/${country.code}`"
-    class="country-card"
-  >
-    <div class="country-card__emoji">
-      {{ country.emoji }}
-    </div>
-    <div class="country-card__info">
-      <p class="country-card__name">
-        {{ country.name }}
-      </p>
-      <div class="country-card__meta">
-        <UBadge variant="subtle" size="sm">
-          {{ country.code }}
-        </UBadge>
-        <span class="country-card__continent">
-          {{ country.continent.name }}
-        </span>
+  <NuxtLink :to="`/countries/${country.code}`" class="country-card">
+    <UCard>
+      <div class="country-card__emoji">
+        {{ country.emoji }}
       </div>
-    </div>
-  </UCard>
+      <div class="country-card__info">
+        <p class="country-card__name">
+          {{ country.name }}
+        </p>
+        <div class="country-card__meta">
+          <UBadge variant="subtle" size="sm">
+            {{ country.code }}
+          </UBadge>
+          <span class="country-card__continent">
+            {{ country.continent.name }}
+          </span>
+        </div>
+      </div>
+    </UCard>
+  </NuxtLink>
 </template>
 
 <style scoped>
